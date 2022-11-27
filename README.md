@@ -1,1 +1,1 @@
-# qa_guru_python_19_mobile_2_appium
+# qa_guru_python_20_mobile_2_appium
