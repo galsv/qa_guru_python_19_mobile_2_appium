@@ -49,6 +49,9 @@ def _by(selector: str | Tuple[str, str]):
     if are_words_with_dashes_underscores_or_numbers_separated_by_space(selector):
         return AppiumBy.ACCESSIBILITY_ID, selector
 
+    if selector.startswith('.'):
+        return AppiumBy.CLASS_NAME, selector[1:]
+
     raise Exception(f'Unsupported selector: {selector}')
 
 

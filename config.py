@@ -4,11 +4,11 @@ from typing import Literal, Optional
 
 from qa_guru_python_20_mobile_2_appium import utils
 
-EnvContext = Literal['personal', 'local', 'test', 'stage', 'prod']
+EnvContext = Literal['emulation', 'browserstack', 'real']
 
 
 class Settings(pydantic.BaseSettings):
-    context: EnvContext = 'local'
+    context: EnvContext = 'emulation'
 
     # --- Appium Capabilities ---
     platformName: str = None
